@@ -1,16 +1,150 @@
-@import url(https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+
 body {
-   background-image: url(../6709616814_MyCSTUStory_03/resources/R.jpg);
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: 100% 100%;
-   text-align: center;
+    background-image: url('../6709616814_MyCSTUStory_03/resources/R.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Athiti', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
 }
-h1 {
-   font-family: 'Courier New', Courier, monospace;
-   font-size: 50px;
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main-content"
+        "video"
+        "social-links";
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
-h2 {
-   font-family: 'Athiti';
-   font-size: medium;
+
+header {
+    grid-area: header;
+    background-color: #330099;
+    color: wheat;
+    padding: 15px;
+    border: 3px dashed #cd5c5c;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-content {
+    grid-area: main-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.side-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    padding: 2px;
+    border: 2px dashed #cd5c5c;
+}
+
+.side-link a {
+    color: #dc3434;
+    text-decoration: none;
+    font-size: 1.2em;
+    
+}
+
+.profile {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    background-color: wheat;
+    border: 5px dashed #cd5c5c;
+    padding: 10px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-info {
+    margin-left: 50px;
+    text-align: left;
+}
+
+.profile-info h2 {
+    color: indigo;
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+.video {
+    grid-area: video;
+}
+
+.video video {
+    width: 600px;
+    align-items: center;
+    background-color: #330099;
+    border: 3px dashed #cd5c5c;
+    padding: 10px;
+}
+
+.social-links {
+    grid-area: social-links;
+    padding: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "main-content main-content"
+            "video video"
+            "social-links social-links";
+    }
+
+    .main-content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main-content"
+            "video"
+            "social-links";
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .video video {
+        width: 100%;
+    }
 }
