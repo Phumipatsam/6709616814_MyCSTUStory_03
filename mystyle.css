@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap);
+body {
+   background-image: url(../6709616814_MyCSTUStory_03/resources/R.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   text-align: center;
+}
+h1 {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 50px;
+}
+h2 {
+   font-family: 'Athiti';
+   font-size: medium;
+}
